@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل معنا</title>
+    <!-- ربط ملف الأنماط المشترك لتحسين اتساق التنقل في الجوال -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* أنماط مخصصة لصفحة الاتصال فقط */
+        .main-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            padding: 1rem;
+        }
+        .form-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            width: 100%;
+            max-width: 500px;
+        }
+        .form-card h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: bold;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        .submit-button {
+            background-color: #333;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            display: block;
+            width: 100%;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+        .submit-button:hover {
+            background-color: #555;
+        }
+    </style>
+    <script src="main.js" defer></script>
+</head>
+<body>
+
+    <nav>
+        <div class="logo"><img src="img/logo.png" alt="Logo جديد" style="height:4.5rem;vertical-align:middle;margin-left:18px;box-shadow:0 2px 12px #888;background:#fff;border-radius:12px;padding:4px;"> <span style="font-size:2.7rem;font-weight:bold;vertical-align:middle;">Loving Homes</span></div>
+        <div class="menu">
+            <a href="index.html"> الرئيسية</a>
+            <a href="about.html">عن الشركة</a>
+            <a href="service.html">الخدمات</a>
+            <a href="package.html">الحزم</a>
+        </div>
+        <div class="contact">
+            <a href="contact.html">تواصل معنا</a>
+        </div>
+        </div>
+    </nav>
+    <div style="display:flex;align-items:center;gap:0.5rem;margin:0.5rem 0 0 0;justify-content:flex-end;">
+        <button id="incFont" title="تكبير النص" class="btn">+</button>
+        <button id="decFont" title="تصغير النص" class="btn">-</button>
+    </div>
+    
+    <div class="main-content">
+        <div class="form-card">
+            <h1>تواصل معنا للاستفسار</h1>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">اسم المستخدم</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">  رسالة للاستفسار عن الحزم أو الحزم المخصصة</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">إرسال</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

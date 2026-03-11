@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حزمنا</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            width: 100%;
+            
+        }
+        nav .logo {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        nav .menu {
+            flex-grow: 1;
+            display: inline-flex;
+            justify-content: center; /* Center the menu items */
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        nav .contact {
+            background: #555;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-size: 1.2rem; /* Adjust font size */
+            display: inline-block;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .service {
+            background: #fff;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: calc(30% - 40px);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .service img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .service h2 {
+            margin: 10px 0;
+            color: #333;
+        }
+        .service p {
+            color: #666;
+            text-align: right;
+            direction: rtl;
+            line-height: 1.8;
+        }
+        .service:hover {
+            transform: scale(1.05);
+        }
+        .book-button {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .book-button:hover {
+            background-color: #555;
+        }
+        /* تحسينات للهواتف */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0.5rem;
+            }
+            nav .logo {
+                font-size: 1.5rem;
+                margin-bottom: 0.5rem;
+            }
+            nav .menu {
+                flex-direction: column;
+                width: 100%;
+                align-items: flex-start;
+            }
+            nav a {
+                margin: 0.3rem 0;
+                font-size: 1rem;
+            }
+            nav .contact {
+                /* avoid full screen width */
+                display: inline-block;
+                margin-top: 0.5rem;
+                text-align: right;
+            }
+            .container {
+                padding: 10px;
+                max-width: 100%;
+                border-radius: 0;
+                box-shadow: none;
+            }
+            .services {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .service {
+                width: 100%;
+                margin: 10px 0;
+            }
+            h1 {
+                font-size: 1.2rem;
+            }
+            p, .service p {
+                font-size: 1rem;
+            }
+        }
+        @media (max-width: 768px) {
+            .service {
+                width: calc(45% - 40px);
+            }
+        }
+        @media (max-width: 480px) {
+            .service {
+                width: calc(100% - 40px);
+            }
+            nav {
+                flex-direction:row; 
+                align-items: flex-start; 
+            }
+            nav .menu {
+                flex-direction: row;
+                width: 100%; /* جعل قائمة التنقل تأخذ العرض الكامل */
+            }
+            nav a {
+                margin: 5px 0; /* تقليل الفراغ بين الروابط */
+                text-align: left; /* محاذاة النص إلى اليسار */
+            }
+        }
+    </style>
+    <script src="main.js" defer></script>
+</head>
+<body>
+
+    <nav>
+        <div class="logo"><img src="img/logo.png" alt="Logo جديد" style="height:4.5rem;vertical-align:middle;margin-left:18px;box-shadow:0 2px 12px #888;background:#fff;border-radius:12px;padding:4px;"> <span style="font-size:2.7rem;font-weight:bold;vertical-align:middle;">Loving Homes</span></div>
+        <div class="menu">
+            <a href="index.html"> الرئيسية</a>
+            <a href="about.html">عن الشركة</a>
+            <a href="service.html">الخدمات</a>
+            <a href="package.html">الحزم</a>
+        </div>
+        <div class="contact">
+            <a href="contact.html">تواصل معنا</a>
+        </div>
+        </div>
+    </nav>
+    <div style="display:flex;align-items:center;gap:0.5rem;margin:0.5rem 0 0 0;justify-content:flex-end;">
+        <button id="incFont" title="تكبير النص" class="btn">+</button>
+        <button id="decFont" title="تصغير النص" class="btn">-</button>
+    </div>
+    
+    <div class="container">
+        <h1>حزمنا</h1>
+        <div class="services">
+            <div class="service">
+                <img src="img/1-1.jpeg" alt="حزمة مميزة">
+                <h2>الحزمة المميزة</h2>
+                <p>
+                    ▪ المشي 4 مرات/ ممارسة أربع أنشطة يوميًا<br>
+                    ▪ مساحة عشب خاصة<br>
+                    ▪ تحديثات/ صور يومية<br>
+                    ▪ مكافآت (على النحو المتفق عليه مع صاحب الحيوان الأليف)
+                </p>
+                <a href="contact.html" class="book-button">الإستفسار</a>
+            </div>
+            <div class="service">
+                <img src="img/1-2.jpeg" alt="حزمة كلاسيكية">
+                <h2>الحزمة الكلاسيكية</h2>
+                <p>
+                    ▪ المشي ثلاثة مرات/ ممارسة ثلاثة أنشطة يوميًا<br>
+                    ▪ حظيرة لعب داخلية<br>
+                    ▪ منطقة للاسترخاء<br>
+                    ▪ جلسة حلاقة وتنظيف
+                </p>
+                <a href="contact.html" class="book-button">الإستفسار</a>
+            </div>
+            <div class="service">
+                <img src="img/1-3.jpeg" alt="حزمة يوم">
+                <h2>حزمة اليوم</h2>
+                <p>
+                    ▪ المشي مرتين يوميًا<br>
+                    ▪ منطقة لعب خارجية<br>
+                    ▪ مسار الرشاقة<br>
+                    ▪ حفر حفرة في الرمل
+                </p>
+                <a href="contact.html" class="book-button">الإستفسار</a>
+            </div>
+            <div class="service">
+                <img src="img/4.jpeg" alt="حزمة ذهبية">
+                <h2>  الحزم المخصصة</h2>
+                <a href="contact.html" class="book-button">الإستفسار</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

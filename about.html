@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عن الشركة </title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        nav {
+            background: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            width: 100%;
+            
+        }
+        nav .logo {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        nav .menu {
+            flex-grow: 1;
+            display: inline-flex;
+            justify-content: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        nav .contact {
+            background: #555;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            display: inline-block; /* match shared stylesheet */
+        }
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        .section {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        .section h2 {
+            color: #218c3a;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .section p {
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 2;
+            margin-bottom: 0;
+        }
+        .logo-section {
+            text-align: center;
+            margin-top: 1rem;
+        }
+        .logo-section img {
+            height: 120px;
+            width: auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px #888;
+            padding: 8px;
+        }
+        .logo-section .company-name {
+            font-size: 2rem;
+            color: #218c3a;
+            font-weight: bold;
+            margin-top: 0.5rem;
+        }
+        /* تحسينات للهواتف */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0.5rem;
+            }
+            nav .logo {
+                font-size: 1.5rem;
+                margin-bottom: 0.5rem;
+            }
+            nav .menu {
+                flex-direction: column;
+                width: 100%;
+                align-items: flex-start;
+            }
+            nav a {
+                margin: 0.3rem 0;
+                font-size: 1rem;
+            }
+            nav .contact {
+                /* natural width on mobile */
+                margin-top: 0.5rem;
+                text-align: right;
+            }
+            .section {
+                padding: 1.5rem;
+            }
+            .section p {
+                font-size: 1rem;
+            }
+            .logo-section img {
+                height: 80px;
+            }
+            .logo-section .company-name {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+    <script src="main.js" defer></script>
+</head>
+<body class="about-page">
+
+    <nav>
+        <div class="logo"><img src="img/logo.png" alt="Logo جديد" style="height:4.5rem;vertical-align:middle;margin-left:18px;box-shadow:0 2px 12px #888;background:#fff;border-radius:12px;padding:4px;"> <span style="font-size:2.7rem;font-weight:bold;vertical-align:middle;">Loving Homes</span></div>
+        <div class="menu">
+            <a href="index.html"> الرئيسية</a>
+            <a href="about.html">عن الشركة</a>
+            <a href="service.html">الخدمات</a>
+            <a href="package.html">الحزم</a>
+        </div>
+        <div class="contact">
+            <a href="contact.html">تواصل معنا</a>
+        </div>
+        </div>
+    </nav>
+    <div style="display:flex;align-items:center;gap:0.5rem;margin:0.5rem 0 0 0;justify-content:flex-end;">
+        <button id="incFont" title="تكبير النص" class="btn">+</button>
+        <button id="decFont" title="تصغير النص" class="btn">-</button>
+    </div>
+
+    <div class="main-content">
+        <div class="container">
+            <div class="about-card">
+                <div class="section">
+                    <h2>عن الشركة</h2>
+                    <p>
+                        هو مركز متخصص في رعاية وإقامة الحيوانات الأليفة، تأسس بهدف توفير بيئة آمنة ومريحة. <b>Loving Homes</b>
+                        يشعر فيها الحيوان وكأنه في منزله. نوفر مساحات مجهزة بعناية، وأنشطة يومية متنوعة، وإشرافًا مستمرًا لضمان أعلى مستويات الراحة والأمان.<br>
+                        نحرص على تقديم خدمات متكاملة تشمل الإقامة، اللعب، والرياضة اليومية، مع الاهتمام بكل التفاصيل التي تضمن تجربة إيجابية للحيوان وطمأنينة كاملة لصاحبه. هدفنا هو خلق بيئة مثالية بالاهتمام والرعاية تعكس حبنا الحقيقي للحيوانات الأليفة.
+                    </p>
+                </div>
+                <div class="logo-section">
+                    <img src="img/logo.png" alt="Loving Homes Logo">
+                    <div class="company-name">Loving Homes</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
